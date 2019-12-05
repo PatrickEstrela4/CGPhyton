@@ -1,23 +1,23 @@
 class Ponto(object):
 
     def __init__(self, x, y):
-        self.x = x
-        self.y = y
+        self._x = x
+        self._y = y
 
     #metodos get
     @property
     def x(self):
-        return x
+        return self._x
 
     @property
     def y(self):
-        return y
+        return self._y
 
     #metodos SET
     @y.setter
     def y(self,value):
-        self.y = value
+        self._y = value
 
     @x.setter
     def x(self,value):
-        self.x = value
+        self._x = value

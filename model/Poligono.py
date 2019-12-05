@@ -3,45 +3,47 @@ from model import Ponto
 class Poligono(object):
 
     def __init__(self,centro,raio,nlados):
-        self.centro = centro
-        self.raio = raio
-        self.vertices = None
-        self.nlados = nlados
+        self._centro = centro
+        self._raio = raio
+        self._vertices = None
+        self._nlados = nlados
 
     @property
     def nlados(self):
-        return nlados
+        return self._nlados
 
     @property
     def vertices(self):
-        return vertices
+        return self._vertices
 
     @property
     def centro(self):
-        return centro
+        return self._centro
 
     @property
     def raio(self):
-       return raio
+       return self._raio
 
     @nlados.setter
     def nlados(self,nlados):
-        self.nlados = nlados
+        self._nlados = nlados
 
     @vertices.setter
     def vertices(self,vertices):
-        self.vertices = vertices
+        self._vertices = vertices
 
     @centro.setter
     def centro(self,centro):
-        self.centro = centro
+        self._centro = centro
 
     @raio.setter
     def Raio(self,raio):
-       self.raio = raio
+       self._raio = raio
     
     def addPonto(self, ponto):
-        if isinstance(ponto,Ponto) :
-            self.vertices.append(ponto)
-        else:
-            print('não é um ponto que foir adicionado')
+        if self._vertices is None:
+                self._vertices = []
+        #if isinstance(ponto, Ponto):
+        self._vertices.append(ponto)
+        #else:
+        #    print('não é um ponto que foir adicionado')

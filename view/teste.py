@@ -1,4 +1,8 @@
-from model import Ponto
+from model.Ponto import Ponto
 
-for i in range(-1, 6):
-    print(i)
+p = Ponto(2,3)
+
+if isinstance(p,Ponto):
+    print("teste")
+else:
+    print("teste2")
