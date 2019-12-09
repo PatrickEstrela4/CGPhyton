@@ -42,7 +42,7 @@ class PoligonoUtils():
 
         pontoUtils = PontoUtils
 
-        for i in range(-nlados, -1):
+        for i in range(1, nlados):
             ponto = pontoUtils.multiMatriz(self, poligono.vertices[-1], nlados)
 
             poligono.addPonto(ponto)

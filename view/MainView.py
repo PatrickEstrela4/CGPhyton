@@ -14,6 +14,7 @@ class MainView(object):
         self.canvas.pack()
 
     def iniciar(self):
+        self.janela.focus_force()
         self.janela.mainloop()
 
     def getCanvas(self):

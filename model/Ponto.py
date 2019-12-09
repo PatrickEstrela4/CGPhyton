@@ -4,7 +4,7 @@ class Ponto(object):
         self._x = x
         self._y = y
 
-    #metodos get
+    # metodos get
     @property
     def x(self):
         return self._x
@@ -13,11 +13,19 @@ class Ponto(object):
     def y(self):
         return self._y
 
-    #metodos SET
+    # metodos SET
     @y.setter
-    def y(self,value):
+    def y(self, value):
         self._y = value
 
     @x.setter
-    def x(self,value):
+    def x(self, value):
         self._x = value
+
+    @property
+    def x2(self, ponto):
+        return self._x ** 2
+
+    @property
+    def y2(self, ponto):
+        return self._y ** 2
