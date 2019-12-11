@@ -23,9 +23,13 @@ class Ponto(object):
         self._x = value
 
     @property
-    def x2(self, ponto):
+    def x2(self):
         return self._x ** 2
 
     @property
-    def y2(self, ponto):
+    def y2(self):
         return self._y ** 2
+
+    def setXY(self, x,y):
+        self._x = x
+        self._y = y

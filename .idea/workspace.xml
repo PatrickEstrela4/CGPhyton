@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77c331dd-b33a-4529-a4bb-ef42a8aaf65e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/CGphyton.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CGphyton.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/patrick_estrela.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/PoligonoController.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/PoligonoController.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/TelaController.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/TelaController.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Poligono.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/Poligono.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/Ponto.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/Ponto.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ultils/PoligonoUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/ultils/PoligonoUtils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ultils/PontoUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/ultils/PontoUtils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ultils/ViewUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/ultils/ViewUtils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/MainView.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/MainView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/teste.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/teste.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +31,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager" selected="Python.TelaController">
@@ -126,10 +122,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="694" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-1366.120.1366.728@0.0.1920.1040" timestamp="1575575977863" />
-    <state x="678" y="426" key="#com.jetbrains.python.refactoring.move.PyMakeFunctionTopLevelDialog" timestamp="1575661798406">
+    <state x="678" y="426" key="#com.jetbrains.python.refactoring.move.PyMakeFunctionTopLevelDialog" timestamp="1575922073502">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="678" y="426" key="#com.jetbrains.python.refactoring.move.PyMakeFunctionTopLevelDialog/0.0.1920.1040/-1366.120.1366.728@0.0.1920.1040" timestamp="1575661798406" />
+    <state x="678" y="426" key="#com.jetbrains.python.refactoring.move.PyMakeFunctionTopLevelDialog/0.0.1920.1040/-1366.120.1366.728@0.0.1920.1040" timestamp="1575922073502" />
     <state x="837" y="222" key="#xdebugger.evaluate" timestamp="1575662542768">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -138,38 +134,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1021" height="466" key="DebuggerActiveHint/0.0.1920.1040/-1366.120.1366.728@0.0.1920.1040" timestamp="1575658103498" />
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1575664093200">
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1575924233721">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1366.120.1366.728@0.0.1920.1040" timestamp="1575664093200" />
-    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1575664093200">
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1366.120.1366.728@0.0.1920.1040" timestamp="1575924233721" />
+    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1575924233721">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1366.120.1366.728@0.0.1920.1040" timestamp="1575664093200" />
-    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1575664093200">
+    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1366.120.1366.728@0.0.1920.1040" timestamp="1575924233721" />
+    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1575924233721">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1366.120.1366.728@0.0.1920.1040" timestamp="1575664093200" />
-    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1575664093200">
+    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1366.120.1366.728@0.0.1920.1040" timestamp="1575924233721" />
+    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1575924233721">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1366.120.1366.728@0.0.1920.1040" timestamp="1575664093200" />
-    <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1575662936294">
+    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1366.120.1366.728@0.0.1920.1040" timestamp="1575924233721" />
+    <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1575922265761">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1366.120.1366.728@0.0.1920.1040" timestamp="1575662936294" />
-    <state width="1899" height="348" key="GridCell.Tab.1.center" timestamp="1575662936294">
+    <state width="1899" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1366.120.1366.728@0.0.1920.1040" timestamp="1575922265761" />
+    <state width="1899" height="348" key="GridCell.Tab.1.center" timestamp="1575922265760">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/-1366.120.1366.728@0.0.1920.1040" timestamp="1575662936294" />
-    <state width="1899" height="348" key="GridCell.Tab.1.left" timestamp="1575662936294">
+    <state width="1899" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/-1366.120.1366.728@0.0.1920.1040" timestamp="1575922265760" />
+    <state width="1899" height="348" key="GridCell.Tab.1.left" timestamp="1575922265760">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/-1366.120.1366.728@0.0.1920.1040" timestamp="1575662936294" />
-    <state width="1899" height="348" key="GridCell.Tab.1.right" timestamp="1575662936294">
+    <state width="1899" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/-1366.120.1366.728@0.0.1920.1040" timestamp="1575922265760" />
+    <state width="1899" height="348" key="GridCell.Tab.1.right" timestamp="1575922265761">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/-1366.120.1366.728@0.0.1920.1040" timestamp="1575662936294" />
+    <state width="1899" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/-1366.120.1366.728@0.0.1920.1040" timestamp="1575922265761" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1575632015769">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -183,9 +179,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/controller/PoligonoController.py</url>
-          <line>80</line>
-          <option name="timeStamp" value="20" />
+          <url>file://$PROJECT_DIR$/controller/TelaController.py</url>
+          <line>141</line>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -12,6 +12,12 @@ from controller.PoligonoController import PoligonoController
 
 class TelaController(object):
 
+    _poligonoSelecionado: Poligono
+    _pontoAnterior: Ponto
+    _poligonoController: PoligonoController
+    _polUtils = PoligonoUtils
+    _viewUtils = ViewUtils
+
     def __init__(self, view: object, canvas: object) -> object:
         self._view = view
         self._canvas = canvas
@@ -53,6 +59,8 @@ class TelaController(object):
         click = Ponto(event.x, event.y)
         self._poligonoSelecionado = self._poligonoController.selectPoligono(click)
         self.drawPoligonoSelecionado(self._poligonoSelecionado)
+        self._pontoAnterior = None
+        self._index = self._poligonoController.listPoligonos.index(self._poligonoSelecionado)
 
     def drawPoligonoSelecionado(self, poligono: Poligono):
         canvas.delete('all')
@@ -70,32 +78,68 @@ class TelaController(object):
         canvas.delete('all')
 
     def drawTela(self, event):
-        for pol in self._poligonos:
+        for pol in self._poligonoController.listPoligonos:
             self._viewUtils.drawPoligono(pol, canvas)
 
+    def drawPoligonoSelecionado2(self, poligono: Poligono):
+        self._viewUtils.drawSelectPoligono(poligono, canvas)
+
     def rotacioanrPoligono(self, event):
-        if self._pontoAnterior == None:
+        if self._pontoAnterior is None:
             self.gravarPoligonoSelecionado()
             self._pontoAnterior = Ponto(event.x, event.y)
             self._index = self._poligonoController.listPoligonos.index(self._poligonoSelecionado)
         else:
             novo = Ponto(event.x, event.y)
-            self._poligonoSelecionado = self._poligonoController.rotacionarPoligono(self._poligonoSelecionado,self._pontoAnterior, novo)
+            self._poligonoSelecionado = self._poligonoController.rotacionarPoligono(self._poligonoSelecionado,
+                                                                                    self._pontoAnterior, novo)
             self._pontoAnterior = novo
             self.limparTela()
             self.drawPoligonoSelecionado(self._poligonoSelecionado)
 
-    def teste(self,e):
-        print(e.x,e.y)
+    def tranladarPoligono(self, event):
+        if self._pontoAnterior is None:
+            self.gravarPoligonoSelecionado()
+            self._pontoAnterior = Ponto(event.x, event.y)
+            self._index = self._poligonoController.listPoligonos.index(self._poligonoSelecionado)
+        else:
+            novo = Ponto(event.x, event.y)
+            self._poligonoSelecionado = self._poligonoController.transladarPoligono(self._poligonoSelecionado,
+                                                                                    self._pontoAnterior, novo)
+            self._pontoAnterior = novo
+            self.limparTela()
+            self.drawPoligonoSelecionado(self._poligonoSelecionado)
+
+
+    def escalonarPoligono(self, event : Event):
+        if self._pontoAnterior is None:
+            self.gravarPoligonoSelecionado()
+            self._pontoAnterior = Ponto(event.x, event.y)
+            self._index = self._poligonoController.listPoligonos.index(self._poligonoSelecionado)
+        else:
+            novo = Ponto(event.x, event.y)
+            self._poligonoSelecionado = self._polUtils.getClone(self._poligonoController.listPoligonos[self._index])
+            self._poligonoSelecionado = self._poligonoController.escalaPoligono(self._poligonoController.listPoligonos[self._index],
+                                                                                    self._poligonoSelecionado, self._pontoAnterior, novo)
+            self.limparTela()
+            self.drawPoligonoSelecionado(self._poligonoSelecionado)
+            self.drawPoligonoSelecionado2(self._poligonoSelecionado)
+
+    def teste(self, e):
+        print(e.x, e.y)
+
     def setActionsInCanvas(self):
         canvas.bind("<Control-Button-1>", lambda e: self.novoPoligono(e))
         canvas.bind('<Button-1>', lambda e: self.selecionaPoligono(e))
         canvas.bind("<Button-2>", lambda e: self.clear(e))
         canvas.bind("<Button-3>", lambda e: self.drawTela(e))
-        canvas.bind('<Shift-B1-Motion>', lambda e: self.rotacioanrPoligono(e))
+        #canvas.bind('<Shift-B1-Motion>', lambda e: self.rotacioanrPoligono(e))
+        canvas.bind('<Alt-B1-Motion>', lambda e: self.tranladarPoligono(e))
+        canvas.bind('<Shift-B1-Motion>', lambda e: self.escalonarPoligono(e))
+        canvas.bind('<Shift-ButtonRelease-1>', lambda e: self.gravarPoligonoSelecionado())
 
     def gravarPoligonoSelecionado(self):
-        if (self._poligonoSelecionado != None):
+        if self._poligonoSelecionado is not None:
             self._poligonoController.listPoligonos[self._index] = self._poligonoSelecionado
         self._pontoAnterior = None
 

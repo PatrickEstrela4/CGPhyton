@@ -3,9 +3,6 @@ from model.Ponto import Ponto
 from ultils.PontoUtils import PontoUtils
 
 
-
-
-
 class PoligonoController():
 
     def __init__(self, canvas):
@@ -44,7 +41,7 @@ class PoligonoController():
     def selectPoligono(self, p: Ponto):
 
         menor = 1000000000000
-        distancia1  = 0
+        distancia1 = 0
 
         for pol in self._listPoligonos:
             nlados = pol.nlados
@@ -56,7 +53,7 @@ class PoligonoController():
                         retorno = pol
                         menor = distancia1
 
-            distancia1 = self._pontoUtils.distanciaPolPonto(pol.vertices[0], pol.vertices[nlados-1], p)
+            distancia1 = self._pontoUtils.distanciaPolPonto(pol.vertices[0], pol.vertices[nlados - 1], p)
             if distancia1 < menor:
                 if distancia1 < 10:
                     retorno = pol
@@ -90,3 +87,47 @@ class PoligonoController():
 
         return selecionado
 
+    def transladarPoligono(self, selecionado: Poligono, anterior: Ponto, novo: Ponto):
+        y = novo.y - anterior.y
+        x = novo.x - anterior.x
+
+        print(x, " ", y)
+        for pol in selecionado.vertices:
+            pol.x = pol.x + x
+            pol.y = pol.y + y
+
+        selecionado.centro.setXY((selecionado.centro.x + x), (selecionado.centro.y + y))
+
+        return selecionado
+
+    def escalaPoligono(self, original: Poligono, selecionado: Poligono, inicio: Ponto, fim: Ponto):
+
+        prop = self._pontoUtils.distanciaPontoReta(selecionado.centro, fim) / \
+               self._pontoUtils.distanciaPontoReta(selecionado.centro, inicio)
+
+        xc = selecionado.centro.x
+        yc = selecionado.centro.y
+
+        for ponto in selecionado.vertices:
+            ponto.x = ponto.x - xc
+            ponto.y = ponto.y - yc
+
+        for ponto in original.vertices:
+            ponto.x = ponto.x - xc
+            ponto.y = ponto.y - yc
+
+        i = 0
+
+        for ponto in selecionado.vertices:
+            ponto.setXY(original.vertices[i].x * prop, original.vertices[i].y * prop)
+            i += 1
+
+        for ponto in selecionado.vertices:
+            ponto.x = ponto.x + xc
+            ponto.y = ponto.y + yc
+
+        for ponto in original.vertices:
+            ponto.x = ponto.x + xc
+            ponto.y = ponto.y + yc
+
+        return selecionado
